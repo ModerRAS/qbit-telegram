@@ -15,7 +15,7 @@ from requests import exceptions
 
 class Bot:
     qb = None
-    download_folder = "./downloads"
+    download_folder = "/Downloads"
     logged_in = False
     TOKEN = bot_auth.token
     # Enable logging
