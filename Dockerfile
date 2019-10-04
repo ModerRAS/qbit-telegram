@@ -7,6 +7,7 @@ COPY ./requirements.txt /app/
 
 RUN apk add --no-cache libstdc++ &&\
     apk add --no-cache --virtual .build-deps  \
+            git \
             build-base \
             libressl-dev \
             libffi-dev \
@@ -17,4 +18,4 @@ RUN apk add --no-cache libstdc++ &&\
     pip install -r requirements.txt && \
     apk del .build-deps
 
-CMD ["python3", "/app/qBit_remote.py"]
+CMD ["python", "/app/qBit_remote.py"]
