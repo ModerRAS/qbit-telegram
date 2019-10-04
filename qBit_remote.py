@@ -138,7 +138,7 @@ class Bot:
                 update.message.reply_text("Connection to client IP address is refused."
                                           "\nPlease try again by typing /start"
                                           "\nOr try to /reconnect later.")
-        elif str(user) not in bot_auth.user_id:
+        elif str(user.id) not in bot_auth.user_id:
             self.logger.info("Unauthorized usage tried by: %s -- %s" % (user.username, user.id))
             update.message.reply_text(
                 "You don't have rights to use me! Who the f*** are you?")
